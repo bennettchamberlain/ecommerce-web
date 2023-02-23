@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_product_web_page/colors.dart';
-import 'package:responsive_product_web_page/product_page/widgets/search_bar.dart';
+import 'package:responsive_product_web_page/pages/widgets/search_bar.dart';
 
 import 'app_logo.dart';
 

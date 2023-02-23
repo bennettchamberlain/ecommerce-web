@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_product_web_page/product_page/widgets/app_logo.dart';
+import 'package:responsive_product_web_page/pages/widgets/app_logo.dart';
 
 class MobileAppBar extends StatelessWidget {
   const MobileAppBar(

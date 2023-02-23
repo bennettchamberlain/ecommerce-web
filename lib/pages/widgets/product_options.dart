@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_product_web_page/colors.dart';
-import 'package:responsive_product_web_page/product_page/widgets/product_colors.dart';
+import 'package:responsive_product_web_page/pages/widgets/product_colors.dart';
 
 import 'rating.dart';
 

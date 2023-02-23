@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_product_web_page/colors.dart';
-import 'package:responsive_product_web_page/product_page/widgets/app_drawer.dart';
-import 'package:responsive_product_web_page/product_page/widgets/image_slider.dart';
+import 'package:responsive_product_web_page/pages/widgets/app_drawer.dart';
+import 'package:responsive_product_web_page/pages/widgets/image_slider.dart';
 import 'package:responsive_product_web_page/ui_helper.dart';
 
 import 'widgets/desktop_appbar.dart';
@@ -10,14 +10,14 @@ import 'widgets/mobile_appbar.dart';
 import 'widgets/product_options.dart';
 import 'widgets/similar_products.dart';
 
-class ProductPage extends StatefulWidget {
-  const ProductPage({super.key});
+class CollectionsPage extends StatefulWidget {
+  const CollectionsPage({super.key});
 
   @override
-  State<ProductPage> createState() => _ProductPageState();
+  State<CollectionsPage> createState() => _CollectionsPageState();
 }
 
-class _ProductPageState extends State<ProductPage> {
+class _CollectionsPageState extends State<CollectionsPage> {
   bool _isDrawerOpened = false;
 
   final verticalController = ScrollController();
@@ -57,17 +57,15 @@ class _ProductPageState extends State<ProductPage> {
                       child: const Spacer(),
                     ),
                     Expanded(
-                      flex: screenType == ScreenType.desktop ? 8 : 0,
-                      child: ImageSlider(
-                        images: const [
-                          "https://raw.githubusercontent.com/mostafaemara/responsive_product_web_page/master/resources/xbox_controller_1.jpg",
-                          "https://raw.githubusercontent.com/mostafaemara/responsive_product_web_page/master/resources/xbox_controller_2.jpg",
-                          "https://raw.githubusercontent.com/mostafaemara/responsive_product_web_page/master/resources/xbox_controller_3.jpg",
-                          "https://raw.githubusercontent.com/mostafaemara/responsive_product_web_page/master/resources/xbox_controller_4.jpg"
-                        ],
-                        screenType: screenType,
-                      ),
-                    ),
+                        flex: screenType == ScreenType.desktop ? 8 : 0,
+                        child: Card(
+                            elevation: 100,
+                            child: Stack(
+                              children: [
+                                Image.network(
+                                    'https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?cs=srgb&dl=pexels-math-90946.jpg&fm=jpg')
+                              ],
+                            ))),
                     Visibility(
                       visible: screenType == ScreenType.desktop,
                       child: const Spacer(),
